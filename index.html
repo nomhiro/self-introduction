@@ -25,7 +25,7 @@
   --sans:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;
   --mono:"IBM Plex Mono",monospace;
 }
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 @page{ size:A4; margin:0; }
 .sheet{
   width:210mm; min-height:297mm; background:#fff; color:var(--ink);
@@ -129,7 +129,7 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
 .view.active{display:flex}
 .sheet{box-shadow:0 18px 50px -22px rgba(20,40,60,.55);border-radius:2px}
 .hint{font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#5d6b78;text-align:center;margin-bottom:4px}
-@media (max-width:820px){
+@media screen and (max-width:820px){
   .sheet{width:100%!important;min-height:auto!important;padding:20px 16px 28px!important;font-size:11.5px!important}
   .stage{padding:14px 8px 34px}
   .topbar{justify-content:center;gap:8px}
@@ -189,8 +189,8 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
           <div class="rule"></div>
         </div>
         <p class="lead">
-          愛知県名古屋市を拠点に、<b>業務の困りごとの整理から、生成 AI の導入・現場への定着まで一通り支援</b>しています。<br>
-          「ツールを入れて終わり」ではなく、<b>現場で実際に使われ、成果に直結する仕組みをつくること</b>を仕事の軸にしています。
+          愛知県名古屋市のエンジニアです。<b>業務システムを自分の手で設計して作る仕事を 8 年</b>続けてきました。<br>
+          近年はそこに<b>生成 AI を組み込み、仕事のカイゼンも含めた提案</b>をしています。自動車の設計現場では、調べものの時間を<b>約 70% 削減</b>しました。作ったあとも、現場で使われる様子を見ながら直し続けています。
         </p>
       </div>
 
@@ -207,8 +207,9 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
             <div class="tx">
               <b>自動車設計の現場に生成 AI を導入</b>
               <ul class="kv">
-                <li><span class="k">課題</span><span class="v">過去の設計資料・不具合事例・両立しにくい条件の確認・法規制などの調べものは、保管場所を人に聞いて探し中身を読む必要があり、一度で解決せず何度も繰り返すことも多かった。</span></li>
-                <li><span class="k">取組</span><span class="v">これらの資料をデータ化し、AI に質問すれば答えが返る仕組みをつくりました。過去資料の整理とベテランの知識のデータ化がカギ。</span></li>
+                <li><span class="k">課題</span><span class="v">過去の設計資料・不具合事例・法規制などの調べものは、保管場所を人に聞いて探し、中身を読み込む必要があり、一度で終わらないことも多かった。</span></li>
+                <li><span class="k">取組</span><span class="v">部署ごとにバラバラに保管されていた資料を集め、AI が読める形に整理し直しました。ベテランに聞き取りを重ね、頭の中にしかなかった知識も文書にしました。そのうえで、AI に質問すれば答えが返る仕組みを作りました。</span></li>
+                <li><span class="k">工夫</span><span class="v">現場の設計者に試してもらい、直すことを繰り返しました。あわせて日々の業務の流れも見直し、その中に AI を組み込みました。</span></li>
                 <li><span class="k">成果</span><span class="v">調べものにかかる時間を<span class="big">約 70% 削減</span>（数百名規模が利用）。Microsoft の公式事例として掲載されました。</span></li>
                 <li><span class="k">期間</span><span class="v">2023年5月 〜 2025年7月</span></li>
               </ul>
@@ -220,9 +221,9 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
             <div class="tx">
               <b>自動車の配線設計の技術伝承</b>
               <ul class="kv">
-                <li><span class="k">課題</span><span class="v">設計内容のチェックは、両立しにくい条件・他への影響・過去の不具合・確認のポイントといったノウハウを持つベテラン層が担っていた。</span></li>
-                <li><span class="k">取組</span><span class="v">ベテランのノウハウを学んだ AI が、ベテランのチェックの前に先にチェック。設計者自身が事前に気付いて直せるようにした。</span></li>
-                <li><span class="k">成果</span><span class="v">設計者が自分で気付けるため指摘が減り、後の工程でのベテランのチェックでの<span class="big">やり直しを約 2 割削減</span>。ベテランのノウハウ伝承にも貢献。</span></li>
+                <li><span class="k">課題</span><span class="v">設計内容のチェックは、両立しにくい条件・他への影響・過去の不具合といったノウハウを持つ一部のベテランが担っていた。</span></li>
+                <li><span class="k">取組</span><span class="v">ベテランが「どこを、なぜ見るのか」というチェックの観点を一つずつ聞き出し、過去の不具合事例と合わせて AI に教えました。ベテランが見る前に AI が先にチェックし、設計者が自分で気付いて直せるようにしました。</span></li>
+                <li><span class="k">成果</span><span class="v">設計者が自分で直せるため、後の工程のベテランのチェックでの<span class="big">やり直しを約 2 割削減</span>。ベテランのノウハウを残すことにもつながっています。</span></li>
                 <li><span class="k">期間</span><span class="v">2025年12月 〜 2026年2月</span></li>
               </ul>
             </div>
@@ -245,9 +246,11 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
           <li>
             <span class="mk">研修</span>
             <div class="tx">
-              <b>AI 活用研修 ＋ 業務改善の伴走支援</b>
+              <b>AI 活用研修と業務改善</b>
               <ul class="kv">
-                <li><span class="k">成果</span><span class="v">トヨタグループ 2 社（受講者 30〜100 名規模）で実施。生まれた<span class="big">累計 40 件ほど</span>の業務改善アイデアのすべてを伴走支援し、業務担当者自身が実際の業務に導入。効果を見ながら継続的に見直し。</span></li>
+                <li><span class="k">取組</span><span class="v">トヨタグループ 2 社（受講者 30〜100 名規模）で AI 活用研修を実施。研修で出た業務改善のアイデアを、一件ずつ現場の担当者と一緒に作りました。</span></li>
+                <li><span class="k">工夫</span><span class="v">経営層・管理職にも進み具合と効果を共有する場を設け、研修が終わった後も改善が続く形にしました。</span></li>
+                <li><span class="k">成果</span><span class="v">生まれた<span class="big">約 40 件</span>のアイデアすべてを実際の業務に導入。効果を見ながら見直しを続けています。</span></li>
                 <li><span class="k">期間</span><span class="v">A社 2025年5〜10月 ／ B社 2026年1〜2月</span></li>
               </ul>
             </div>
@@ -263,28 +266,6 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
           </li>
         </ul>
 
-        <div class="ach-cat">登壇・受賞</div>
-        <ul class="ach">
-          <li>
-            <span class="mk alt">受賞</span>
-            <div class="tx">
-              <b><a href="https://mvp.microsoft.com/ja-JP/MVP/profile/93ebd9f1-a8c0-492c-8cc2-adc7f5f980e9" target="_blank" style="color:var(--accent-deep);text-decoration:none">Microsoft MVP for Microsoft Foundry</a></b>
-              <ul class="kv">
-                <li><span class="k">成果</span><span class="v">生成 AI 領域での継続的な技術発信・勉強会への貢献が評価され受賞。</span></li>
-                <li><span class="k">期間</span><span class="v">2026年6月1日</span></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <span class="mk">登壇</span>
-            <div class="tx">
-              <b>地域の勉強会・コミュニティで登壇</b>
-              <ul class="kv">
-                <li><span class="k">成果</span><span class="v">名古屋を中心に、生成 AI 活用の実践知識を勉強会で共有。</span></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
       </div>
 
       <div class="pagemark">p.1 / 2</div>
@@ -293,15 +274,16 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
     <!-- Sheet 2 -->
     <div class="sheet">
 
-      <!-- 大切にしていること -->
+      <!-- 仕事の進め方 -->
       <div class="sec" style="margin-top:0">
         <div class="sec-h">
-          <div class="jp">大切にしていること</div>
+          <div class="jp">仕事の進め方</div>
           <div class="rule"></div>
         </div>
         <p class="lead">
-          <b>「困りごとに向き合う」</b> — 社会人1年目から現在まで、新しい仕組みやサービスをどう活かせるかという観点でチャレンジし続けています。<br>
-          <b>「ゼロから学ぶことを厭わない」</b> — 新しいことに偏見なく積極的に知識・経験を取りに行くマインドを大切にしています。
+          <b>「まず小さく作って、見てもらう」</b> — 大きな計画書より先に、動くものを小さく作ってお見せします。実際に触っていただいてから、広げるかどうかを決められます。<br>
+          <b>「入れて終わりにせず、直し続ける」</b> — 導入したあとも、現場の声を聞きながら直し続けます。設計現場の 70% 削減も、この繰り返しで実現しました。<br>
+          <b>「現場を知る担当者と二人三脚」</b> — 業務を一番よく知るのは現場の担当者の方です。その方と一緒に進めることで、実際の仕事に合った形にします。40 件の業務改善もすべてこの進め方で作りました。
         </p>
       </div>
 
@@ -317,14 +299,9 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
             <div class="ti">立命館大学 情報理工学部 情報システム学科 卒業</div>
           </li>
           <li>
-            <div class="yr">2019.04</div>
+            <div class="yr">2018.04</div>
             <div class="ti">トヨタシステムズ 入社</div>
-            <div class="ds">社内システムを Microsoft のクラウドへ移行する開発・運用に従事。</div>
-          </li>
-          <li>
-            <div class="yr">2020.04</div>
-            <div class="ti">KINTO Technologies 入社</div>
-            <div class="ds">車の定額利用サービスのシステム開発を担当。</div>
+            <div class="ds">自動車会社の業務システムの開発を担当。</div>
           </li>
           <li>
             <div class="yr">2023.05</div>
@@ -338,8 +315,13 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
           </li>
           <li>
             <div class="yr">2025.05</div>
-            <div class="ti">AI 活用研修 ＋ 業務改善の伴走支援を開始</div>
-            <div class="ds">トヨタグループ 2 社で実施。生まれた 40 件ほどのアイデアすべてを伴走支援し、業務担当者が実際の業務に導入。</div>
+            <div class="ti">AI 活用研修と業務改善を開始</div>
+            <div class="ds">トヨタグループ 2 社で実施。研修で生まれた約 40 件のアイデアすべてを、現場の担当者と一緒に実際の業務に導入。</div>
+          </li>
+          <li>
+            <div class="yr">2025.08</div>
+            <div class="ti">KINTO Technologies 入社</div>
+            <div class="ds">自動車の設計・製造現場への生成 AI 導入を担当。</div>
           </li>
           <li>
             <div class="yr">2026.06</div>
@@ -352,20 +334,27 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
       <!-- 発信 -->
       <div class="sec tight">
         <div class="sec-h">
-          <div class="jp">発信・コミュニティ</div>
+          <div class="jp">受賞・発信・コミュニティ</div>
           <div class="rule"></div>
         </div>
         <div class="out">
+          <p>
+            <b><a href="https://mvp.microsoft.com/ja-JP/MVP/profile/93ebd9f1-a8c0-492c-8cc2-adc7f5f980e9" target="_blank" style="color:var(--accent-deep);text-decoration:none">Microsoft MVP for Microsoft Foundry</a>（2026年6月 受賞）</b><br>
+            生成 AI 分野での継続的な技術発信と勉強会への貢献が Microsoft に評価されました。
+          </p>
           <p>
             <b>オンライン動画講座（Udemy）</b><br>
             生成 AI・AI 活用の導入経験を教材化。累計受講者 6,700 名以上・講座 11 本・平均評価 4.2★
           </p>
           <p>
             <b>技術ブログ（Zenn）</b><br>
-            生成 AI や Microsoft のクラウドに関する技術記事を継続発信中。<br>
+            生成 AI に関する技術記事を継続発信中。<br>
             <a href="https://zenn.dev/nomhiro" target="_blank" style="font-family:var(--mono);font-size:8px;color:var(--accent)">▸ zenn.dev/nomhiro</a>
           </p>
-          <p><b>勉強会・コミュニティ活動</b></p>
+          <p>
+            <b>勉強会・コミュニティ活動</b><br>
+            名古屋を中心に、生成 AI 活用の実践知識を勉強会で発表しています。
+          </p>
           <div class="comm">
             <span class="tag">なごあず（名古屋の Azure 勉強会）</span>
             <span class="tag">すきやねんAzure</span>
@@ -451,7 +440,7 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
           <b>Azure ネイティブ</b>なバックエンドエンジニアとして 6 年。Java・Next.js・Python を主軸に
           App Service・Functions・Cosmos DB・Service Bus・AKS を活用したシステム開発を経験。<br>
           近年は <b>生成 AI の実業務組み込み</b>に注力。既存システムへの自然な統合・RAG・AI エージェント設計から
-          本番運用まで一貫して担います。KINTO Technologies での AI 活用は
+          本番運用まで一貫して担います。自動車設計の現場での AI 活用は
           <a href="https://news.microsoft.com/ja-jp/features/241120-toyota-is-deploying-ai-agents-to-harness-the-collective-wisdom-of-engineers-and-innovate-faster/" target="_blank" style="color:var(--accent)">Microsoft 公式グローバル事例</a>に掲載されました。
         </p>
       </div>
@@ -565,11 +554,12 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
 
         <div class="proj">
           <div class="top">
-            <h4>AI エージェントによる集合知活用基盤（KINTO Technologies）</h4>
-            <div class="per">2024.04 — 2024.11</div>
+            <h4>マルチ AI エージェント基盤「O-beya」（トヨタシステムズ）</h4>
+            <div class="per">2024.04 — 2025.07</div>
           </div>
-          <div class="role-tag">Architecture · Agent Design · Backend</div>
-          <p>エンジニアの集合知を蓄積・活用する AI エージェント基盤。Azure AI Foundry × AutoGen で実装し、
+          <div class="role-tag">Scrum Master · Architecture · Agent Design</div>
+          <p>トヨタ自動車パワートレーン領域向けの、エンジニアの集合知を蓄積・活用するマルチエージェント基盤。
+          アイデア出しからアーキテクチャ設計・開発までスクラムマスター兼開発者として主導し、
           Microsoft のグローバル事例として掲載。
           <a href="https://news.microsoft.com/ja-jp/features/241120-toyota-is-deploying-ai-agents-to-harness-the-collective-wisdom-of-engineers-and-innovate-faster/" target="_blank" style="color:var(--accent);font-family:var(--mono);font-size:7.6px">▸ Microsoft News</a></p>
           <div class="tags">
@@ -581,49 +571,47 @@ body{background:#e9e7e0;margin:0;padding:0;background-image:radial-gradient(circ
 
         <div class="proj">
           <div class="top">
-            <h4>生成 AI を組み込んだ業務提案アプリ（KINTO Technologies）</h4>
-            <div class="per">2022 — 2024</div>
+            <h4>生成 AI 業務アシスタント（トヨタシステムズ）</h4>
+            <div class="per">2023.05 — 2025.07</div>
           </div>
-          <div class="role-tag">Backend · Prompt Design · Integration</div>
-          <p>さまざまなフォーマット（図・表を含む社内文書）を活用した生成 AI アプリ。チャット UI だけでなく
-          既存システムへ AI を組み込み、お客様の調査工数を約 7 割削減。
-          Azure Functions + Storage Queue による非同期処理で安定稼働を実現。</p>
+          <div class="role-tag">Project Lead · Backend · Prompt Design</div>
+          <p>自動車設計の現場向けに、図・表を含む多様な社内文書をデータ化。チャット UI に加えて
+          既存業務システムへ生成 AI を組み込み、お客様の調査工数を約 7 割削減。
+          案件責任者・スクラムマスターとして 12 名の開発チームを主導。</p>
           <div class="tags">
-            <span class="tag">Azure OpenAI</span><span class="tag">Functions</span>
-            <span class="tag">Storage Queue</span><span class="tag">Cosmos DB</span>
-            <span class="tag">Python</span><span class="tag">Next.js</span>
-          </div>
-        </div>
-
-        <div class="proj">
-          <div class="top">
-            <h4>モビリティサービス バックエンド開発（KINTO Technologies）</h4>
-            <div class="per">2020.04 — 2022</div>
-          </div>
-          <div class="role-tag">Backend · API · Infrastructure</div>
-          <p>トヨタグループのモビリティサービスのバックエンド開発。
-          Java / Next.js / Python を使い、App Service・Functions・Cosmos DB・Service Bus を組み合わせた
-          マイクロサービス構成を担当。</p>
-          <div class="tags">
-            <span class="tag">Java</span><span class="tag">Next.js</span><span class="tag">Python</span>
-            <span class="tag">App Service</span><span class="tag">Functions</span>
-            <span class="tag">Cosmos DB</span><span class="tag">Service Bus</span>
-          </div>
-        </div>
-
-        <div class="proj">
-          <div class="top">
-            <h4>コントローラシステムの Azure 移行（トヨタシステムズ）</h4>
-            <div class="per">2019.04 — 2020.03</div>
-          </div>
-          <div class="role-tag">Infrastructure · Backend · DevOps</div>
-          <p>オンプレミスのコントローラ・フロアシステムを Azure へ移行。
-          Java コンテナアプリのバックエンド設計・実装、Jenkins CI/CD パイプライン構築、
-          Kubernetes によるコンテナ運用を担当。</p>
-          <div class="tags">
-            <span class="tag">Azure</span><span class="tag">Java</span><span class="tag">Docker</span>
-            <span class="tag">Kubernetes</span><span class="tag">Jenkins</span>
+            <span class="tag">Azure OpenAI</span><span class="tag">Document Intelligence</span>
             <span class="tag">Functions</span><span class="tag">Cosmos DB</span>
+            <span class="tag">Next.js</span><span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div class="top">
+            <h4>エンタープライズ Azure 基盤・Simulation ジョブ実行基盤（トヨタシステムズ）</h4>
+            <div class="per">2021.04 — 2022.03</div>
+          </div>
+          <div class="role-tag">Infrastructure · Backend · Job Platform</div>
+          <p>Hub &amp; Spoke 構成のセキュアな社内 Azure 基盤を要件定義から構築・運用まで担当（案件副責任者）。
+          AKS（KEDA）と Queue Storage・Functions・Cosmos DB を組み合わせ、
+          ジョブ数やライセンス数を加味した実行制御を行う Simulation ジョブ基盤を実装。</p>
+          <div class="tags">
+            <span class="tag">AKS</span><span class="tag">KEDA</span>
+            <span class="tag">Queue Storage</span><span class="tag">Functions</span>
+            <span class="tag">Cosmos DB</span><span class="tag">Azure Firewall</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div class="top">
+            <h4>Web アプリのコンテナ化・クラウド化（トヨタシステムズ）</h4>
+            <div class="per">2020.04 — 2021.03</div>
+          </div>
+          <div class="role-tag">Containerization · CI/CD</div>
+          <p>Oracle WebLogic 上の Java アプリをコンテナ化し、Azure Red Hat OpenShift へ移行。
+          Jenkins による CD パイプラインを構築し、既存の開発チームへコンテナを使った開発プロセスを教育。</p>
+          <div class="tags">
+            <span class="tag">Azure Red Hat OpenShift</span><span class="tag">Docker</span>
+            <span class="tag">Java</span><span class="tag">Jenkins</span>
           </div>
         </div>
 
