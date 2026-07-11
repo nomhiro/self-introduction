@@ -10,8 +10,7 @@
 
 ## デプロイとブランチ構成（重要）
 
-- **GitHub Pages は `main` ブランチの root から配信**（legacy build）。`main` にマージされるまで公開されない。
-- **リポジトリのデフォルトブランチは `main` ではなく `claude/github-pages-profile-FLtQ2`**。`gh pr create` はデフォルトで間違った base に向くため、**PR は必ず `--base main` を指定**すること。
+- **GitHub Pages は `main` ブランチ（デフォルトブランチ）の root から配信**（legacy build）。`main` にマージされるまで公開されない。
 - 過去に「Pages が更新されない」問題があり、原因対策としてキャッシュ抑止 meta タグ（Cache-Control / Pragma / Expires）を `<head>` に追加済み。**削除しないこと**。
 
 ## 編集時の注意
